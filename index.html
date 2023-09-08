@@ -1,0 +1,30 @@
+<!--
+MURPHY M. LOPES
+ROOPA RAJU
+IST-226
+10/13/2021
+[index.html]
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Convert Temperatures</title>
+   	<link rel="stylesheet" href="styles.css">
+    <script src="convert_temp.js"></script>
+</head>
+
+<body>
+<main>
+    <h1>Convert temperatures</h1>
+    <input type="radio" name="conversion_type" onclick="toCelsius()" id="to_celsius" checked>Fahrenheit to Celsius<br>
+    <input type="radio" name="conversion_type" onclick="toFahrenheit()" id="to_fahrenheit">Celsius to Fahrenheit<br><br>
+    <label id="degree_label_1">Enter F degrees:</label>
+    <input type="text" id="degrees_entered" oninput="validateToEnable()"><br>
+    <label id="degree_label_2">Degrees Celsius:</label>
+    <input type="text" id="degrees_computed" disabled><br>
+    <label>&nbsp;</label>
+    <input type="button" onclick="convertTemp()" id="convert" value="Convert" disabled /><br>
+</main>
+</body>
+</html>
