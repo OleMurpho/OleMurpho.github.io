@@ -36,7 +36,7 @@ MURPHY M. LOPES
     display: inline;
     flex-direction: row;
     position: absolute;
-    text-align: center;
+    text-align: left;
   }
   header {
     background-image: linear-gradient(to top, #000, darkgreen);

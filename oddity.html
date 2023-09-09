@@ -1,0 +1,66 @@
+<!--
+MURPHY M. LOPES
+09/08/2023
+[oddity.html]
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>OleMurpho's WebApps</title>
+   	<link rel="stylesheet" href="styles.css">
+    <meta charset="utf-8">
+    <meta name="description" content="Murphin' Around.">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        a:link {
+            color: white;
+            }
+        a:visited {
+            color: white;
+            }
+        body, html  {
+            height: 100%;
+            margin: 0;
+            font-family: 'Brush Script MT', cursive;
+            }
+        .active {
+            background-color: #4CAF50;
+            }
+        .column {
+            float: right;
+            width: 33%;
+            }
+    </style>
+        <header>
+			<nav >
+				<ul>
+					<li style ="display: inline;"><a href="index.html">Home</a></li>
+					<li style ="display: inline;"><a href="comfy.html">Comfy Apps</a></li>
+                    <li style ="display: inline;"><a href="oddity.html">Oddities</a></li>
+				</ul>
+			</nav>
+		</header>
+		<h1>HOME</h1>
+</head>
+
+<body>
+<main>
+    <canvas id="unity-canvas" width=960 height=600 style="width: 960px; height: 600px; background: #231F20"></canvas>
+    <script src="Build/FragmentAlphaWebGL.loader.js"></script>
+    <script>
+      createUnityInstance(document.querySelector("#unity-canvas"), {
+        dataUrl: "Build/FragmentAlphaWebGL.data",
+        frameworkUrl: "Build/FragmentAlphaWebGL.framework.js",
+        codeUrl: "Build/FragmentAlphaWebGL.wasm",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "RoundTableGames",
+        productName: "Fragment",
+        productVersion: "1.0.1",
+        // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+        // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
+      });
+    </script>
+</main>
+</body>
+</html>
