@@ -1,30 +1,55 @@
 <!--
 MURPHY M. LOPES
-ROOPA RAJU
-IST-226
-10/13/2021
+09/08/2023
 [index.html]
 -->
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<title>Convert Temperatures</title>
+	<title>OleMurpho's WebApps</title>
    	<link rel="stylesheet" href="styles.css">
-    <script src="convert_temp.js"></script>
+    <meta charset="utf-8">
+    <meta name="description" content="Murphin' Around.">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        a:link {
+            color: white;
+            }
+        a:visited {
+            color: white;
+            }
+        body, html  {
+            height: 100%;
+            margin: 0;
+            font-family: 'Brush Script MT', cursive;
+            }
+        .active {
+            background-color: #4CAF50;
+            }
+        .column {
+            float: right;
+            width: 33%;
+            }
+    </style>
+
+    <div class="hero-image">
+        <header>
+			<nav >
+				<ul>
+					<li style ="display: inline;"><a href="Index.html">Home</a></li>
+					<li style ="display: inline;"><a href="comfy.html">Comfy Apps</a></li>
+                    <li style ="display: inline;"><a href="oddity.html">Oddities</a></li>
+				</ul>
+			</nav>
+		</header>
+		<h1>HOME</h1>
+    </div>
 </head>
 
 <body>
 <main>
-    <h1>Convert temperatures</h1>
-    <input type="radio" name="conversion_type" onclick="toCelsius()" id="to_celsius" checked>Fahrenheit to Celsius<br>
-    <input type="radio" name="conversion_type" onclick="toFahrenheit()" id="to_fahrenheit">Celsius to Fahrenheit<br><br>
-    <label id="degree_label_1">Enter F degrees:</label>
-    <input type="text" id="degrees_entered" oninput="validateToEnable()"><br>
-    <label id="degree_label_2">Degrees Celsius:</label>
-    <input type="text" id="degrees_computed" disabled><br>
-    <label>&nbsp;</label>
-    <input type="button" onclick="convertTemp()" id="convert" value="Convert" disabled /><br>
+    
 </main>
 </body>
 </html>
