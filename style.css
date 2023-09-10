@@ -31,6 +31,7 @@ MURPHY M. LOPES
     display: flex;
     flex-direction: row;
     width: 100%;
+    height: 480px;
   }
   #fragmentDivHeader {
     display: flex;
