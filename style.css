@@ -12,7 +12,7 @@ MURPHY M. LOPES
    *
    */
   body {
-    min-height: 100%;
+
   }
 
   /*
@@ -24,6 +24,7 @@ MURPHY M. LOPES
     color: white;
     display: flex;
     flex-direction: column;
+    height: 480px;
     margin:25px;
   }
   #fragmentDivBody {
