@@ -1,0 +1,139 @@
+/*
+MURPHY M. LOPES
+09/08/2023
+[style.css]
+*/
+
+  * { 
+    box-sizing: border-box; 
+  }
+
+  /*
+   * fragmentDiv
+   */
+  .fragmentDiv {
+    background-color: black;
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+  }
+  #fragmentDivBody {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  #fragmentDivHeader {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+  }
+  #fragmentGameDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 65%;
+  }
+  #fragmentControlsDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 35%;
+  }
+  #fragmentGameplayDiv {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  #fragmentGameplayInnerDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 33%;
+  }
+
+  /*
+   * header
+   */
+  header {
+    align-items:center;
+    background-color:black;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap:nowrap;
+    justify-content: space-between;
+  }
+
+  /*
+   * navClass
+   */
+  .navClass {
+    flex-direction: column;
+    font-size: larger;
+  }   
+  .navClass a {
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  .navClass a:hover {
+    background-color:white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 8px black;
+    color: black;
+    padding: 4px 8px;
+  } 
+  .navClass a:link {
+    color: white;
+  }
+  .navClass a:visited {
+    color: white;
+  }
+  .navClass a:link:hover {
+    color: black;
+  }
+  .navClass a:visited:hover {
+    color: black;
+  }
+  .navClass li {
+    background-color: black;
+    border-radius: 25px;
+    color: black;
+    display: inline-block;
+    padding: 24px 16px;
+  }
+  .navClass ul {
+    padding-inline-start: 10px;
+  }
+
+  /*
+   * navListIds
+   */
+  #navListIdHome {
+    background-color: #5600f4;
+    box-shadow: 5px 5px 8px white;
+  }
+  #navListIdApps {
+    background-color: #250096;
+    box-shadow: 5px 5px 8px white;
+  }
+  #navListIdGames {
+    background-color: #72076e;
+    box-shadow: 5px 5px 8px white;
+  }
+
+  /*
+   * pageTitleClass
+   */
+  .pageTitleClass {
+    background-color: black;
+    border-radius: 25px;
+    color: white;
+    flex-direction: column;
+    margin: 10px;
+    text-align: center;
+    width: 25%;
+   }
+
