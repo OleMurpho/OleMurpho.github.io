@@ -9,15 +9,28 @@ MURPHY M. LOPES
   }
 
   /*
-   *
+   * calculatorDiv, fragmentDiv, homeDiv
    */
-  body {
-
+  .calculatorDiv, .homeDiv {
+    background-color: black;
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    height: 480px;
+    justify-content:space-evenly;
+    margin:25px;
+  }
+  .calculatorDivHalf {
+    background-color: white;
+    border-radius: 25px;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    margin: 25px;
+    width: 40%;
   }
 
-  /*
-   * fragmentDiv
-   */
   .fragmentDiv {
     background-color: black;
     border-radius: 10px;
