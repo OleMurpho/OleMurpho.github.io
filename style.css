@@ -4,173 +4,310 @@ MURPHY M. LOPES
 [style.css]
 */
 
-  * { 
-    box-sizing: border-box; 
+* { 
+  box-sizing: border-box; 
+}
+
+/*
+  * calculatorDiv, fragmentDiv, homeDiv
+  */
+.calculatorDiv, .homeDiv {
+  background-color: black;
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 1%;
+  width: 100%;
+}
+.calculatorDivHalf {
+  align-items: center;
+  background-color: white;
+  border-radius: 25px;
+  color: black;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 25px;
+  max-width: 600px;
+  min-width: 600px;
+  max-height: 600px;
+  min-height: 600px;
+}
+
+.fragmentDiv {
+  background-color: black;
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  height: 550px;
+  margin-top: 1%;
+}
+#fragmentDivBody {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 550px;
+}
+#fragmentDivHeader {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+}
+#fragmentGameDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 2.5%;
+  width: 65%;
+}
+#fragmentControlsDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: 35%;
+}
+#fragmentGameplayDiv {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+#fragmentGameplayInnerDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 33%;
+}
+
+/*
+  * header
+  */
+header {
+  align-items:center;
+  background-color:black;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap:nowrap;
+  justify-content: space-between;
+}
+
+/*
+  *
+  */
+html {
+  height: 100%;
+}
+
+/*
+  *
+  */
+main {
+  min-height: 100%;
+}
+
+/*
+  * navClass
+  */
+.navClass {
+  flex-direction: column;
+  font-size: larger;
+}   
+.navClass a {
+  text-decoration: none;
+  transition: 0.3s;
+}
+.navClass a:hover {
+  background-color:white;
+  border-radius: 10px;
+  box-shadow: 5px 5px 8px black;
+  color: black;
+  padding: 4px 8px;
+} 
+.navClass a:link {
+  color: white;
+}
+.navClass a:visited {
+  color: white;
+}
+.navClass a:link:hover {
+  color: black;
+}
+.navClass a:visited:hover {
+  color: black;
+}
+.navClass li {
+  background-color: black;
+  border-radius: 25px;
+  color: black;
+  display: inline-block;
+  padding: 24px 16px;
+}
+.navClass ul {
+  padding-inline-start: 10px;
+}
+
+/*
+  * navListIds
+  */
+#navListIdHome {
+  background-color: #5600f4;
+  box-shadow: 5px 5px 8px white;
+}
+#navListIdApps {
+  background-color: #250096;
+  box-shadow: 5px 5px 8px white;
+}
+#navListIdGames {
+  background-color: #72076e;
+  box-shadow: 5px 5px 8px white;
+}
+
+/*
+  * pageTitleClass
+  */
+.pageTitleClass {
+  background-color: black;
+  border-radius: 25px;
+  color: white;
+  flex-direction: column;
+  margin: 10px;
+  text-align: center;
+  width: 25%;
   }
 
-  /*
-   * calculatorDiv, fragmentDiv, homeDiv
-   */
-  .calculatorDiv, .homeDiv {
-    background-color: black;
-    border-radius: 10px;
-    color: white;
-    display: flex;
-    flex-direction: row;
-    height: 480px;
-    justify-content:space-evenly;
-    margin:25px;
+
+  /* * * * * * *
+  * OHM CHART *
+  * * * * * * */
+  
+  .chart {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border-radius: 250px;
+    clip: rect(0px, 250px, 500px, 0px);
+    transition: 500ms;
   }
-  .calculatorDivHalf {
-    background-color: white;
-    border-radius: 25px;
-    color: black;
-    display: flex;
-    flex-direction: column;
-    margin: 25px;
-    width: 40%;
+  .chart:hover {
+    background-color: rgba(255, 255, 255, 0) !important;
+  }
+  
+  .hold {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border-radius: 250px;
+    clip: rect(0px, 350px, 250px, 250px);
   }
 
-  .fragmentDiv {
-    background-color: black;
-    border-radius: 10px;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    height: 480px;
-    margin:25px;
+  #chartSlice0 {
+    transform: rotate(0deg);
   }
-  #fragmentDivBody {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 480px;
+  
+  #chartSlice1 {
+    transform: rotate(30deg);
   }
-  #fragmentDivHeader {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    width: 100%;
+  
+  #chartSlice2 {
+    transform: rotate(60deg);
   }
-  #fragmentGameDiv {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 65%;
+  
+  #chartSlice3 {
+    transform: rotate(90deg);
   }
-  #fragmentControlsDiv {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    width: 35%;
+  #chartSlice4 {
+    transform: rotate(120deg);
   }
-  #fragmentGameplayDiv {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
+  
+  #chartSlice5 {
+    transform: rotate(150deg);
   }
-  #fragmentGameplayInnerDiv {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 33%;
+  
+  #chartSlice6 {
+    transform: rotate(180deg);
   }
+  
+  #chartSlice7 {
+    transform: rotate(210deg);
+  }
+  #chartSlice8 {
+    transform: rotate(240deg);
+  }
+  
+  #chartSlice9 {
+    transform: rotate(270deg);
+  }
+  
+  #chartSlice10 {
+    transform: rotate(300deg);
+  }
+  
+  #chartSlice11 {
+    transform: rotate(330deg);
+  }
+  
 
-  /*
-   * header
-   */
-  header {
-    align-items:center;
-    background-color:black;
-    border-radius: 15px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap:nowrap;
-    justify-content: space-between;
-  }
 
-  /*
-   *
-   */
-  html {
-    height: 100%;
+  #chartSlice0 .chart {
+    background-color: #236e71;
+    transform: rotate(30deg);
   }
-
-  /*
-   *
-   */
-  main {
-    min-height: 100%;
+  
+  #chartSlice1 .chart {
+    background-color: #127473;
+    transform: rotate(30deg);
   }
-
-  /*
-   * navClass
-   */
-  .navClass {
-    flex-direction: column;
-    font-size: larger;
-  }   
-  .navClass a {
-    text-decoration: none;
-    transition: 0.3s;
+  
+  #chartSlice2 .chart {
+    background-color: #007975;
+    transform: rotate(30deg);
   }
-  .navClass a:hover {
-    background-color:white;
-    border-radius: 10px;
-    box-shadow: 5px 5px 8px black;
-    color: black;
-    padding: 4px 8px;
-  } 
-  .navClass a:link {
-    color: white;
+  
+  #chartSlice3 .chart {
+    background-color: #007e75;
+    transform: rotate(30deg);
   }
-  .navClass a:visited {
-    color: white;
+  #chartSlice4 .chart {
+    background-color: #008474;
+    transform: rotate(30deg);
   }
-  .navClass a:link:hover {
-    color: black;
+  
+  #chartSlice5 .chart {
+    background-color: #008972;
+    transform: rotate(30deg);
   }
-  .navClass a:visited:hover {
-    color: black;
+  
+  #chartSlice6 .chart {
+    background-color: #008e6f;
+    transform: rotate(30deg);
   }
-  .navClass li {
-    background-color: black;
-    border-radius: 25px;
-    color: black;
-    display: inline-block;
-    padding: 24px 16px;
+  
+  #chartSlice7 .chart {
+    background-color: #00936a;
+    transform: rotate(30deg);
   }
-  .navClass ul {
-    padding-inline-start: 10px;
+  #chartSlice8 .chart {
+    background-color: #009865;
+    transform: rotate(30deg);
   }
-
-  /*
-   * navListIds
-   */
-  #navListIdHome {
-    background-color: #5600f4;
-    box-shadow: 5px 5px 8px white;
+  
+  #chartSlice9 .chart {
+    background-color: #009c5e;
+    transform: rotate(30deg);
   }
-  #navListIdApps {
-    background-color: #250096;
-    box-shadow: 5px 5px 8px white;
+  
+  #chartSlice10 .chart {
+    background-color: #00a157;
+    transform: rotate(30deg);
   }
-  #navListIdGames {
-    background-color: #72076e;
-    box-shadow: 5px 5px 8px white;
+  
+  #chartSlice11 .chart {
+    background-color: #1fa54e;
+    transform: rotate(30deg);
   }
-
-  /*
-   * pageTitleClass
-   */
-  .pageTitleClass {
-    background-color: black;
-    border-radius: 25px;
-    color: white;
-    flex-direction: column;
-    margin: 10px;
-    text-align: center;
-    width: 25%;
-   }
-
+  
