@@ -4,38 +4,27 @@ MURPHY M. LOPES
 [style.css]
 */
 
+/* SITE GLOBAL */
 * { 
   box-sizing: border-box; 
 }
-
-/*
-  * calculatorDiv, fragmentDiv, homeDiv
-  */
-.calculatorDiv, .homeDiv {
-  background-color: black;
-  border-radius: 10px;
-  color: white;
+header {
+  align-items:center;
+  background-color:black;
+  border-radius: 15px;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
-  margin-top: 1%;
-  width: 100%;
+  flex-wrap:nowrap;
+  justify-content: space-between;
 }
-.calculatorDivHalf {
-  align-items: center;
-  background-color: white;
-  border-radius: 25px;
-  color: black;
-  display:flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 25px;
-  max-width: 600px;
-  min-width: 600px;
-  max-height: 600px;
-  min-height: 600px;
+html {
+  height: 100%;
+}
+main {
+  min-height: 100%;
 }
 
+/* FRAGMENT GAME */
 .fragmentDiv {
   background-color: black;
   border-radius: 10px;
@@ -83,36 +72,7 @@ MURPHY M. LOPES
   width: 33%;
 }
 
-/*
-  * header
-  */
-header {
-  align-items:center;
-  background-color:black;
-  border-radius: 15px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap:nowrap;
-  justify-content: space-between;
-}
-
-/*
-  *
-  */
-html {
-  height: 100%;
-}
-
-/*
-  *
-  */
-main {
-  min-height: 100%;
-}
-
-/*
-  * navClass
-  */
+/* NAVIGATION */
 .navClass {
   flex-direction: column;
   font-size: larger;
@@ -150,10 +110,6 @@ main {
 .navClass ul {
   padding-inline-start: 10px;
 }
-
-/*
-  * navListIds
-  */
 #navListIdHome {
   background-color: #5600f4;
   box-shadow: 5px 5px 8px white;
@@ -167,9 +123,7 @@ main {
   box-shadow: 5px 5px 8px white;
 }
 
-/*
-  * pageTitleClass
-  */
+/* PAGE TITLE */
 .pageTitleClass {
   background-color: black;
   border-radius: 25px;
@@ -180,134 +134,223 @@ main {
   width: 25%;
   }
 
-
-  /* * * * * * *
-  * OHM CHART *
-  * * * * * * */
-  
-  .chart {
-    position: absolute;
-    width: 500px;
-    height: 500px;
-    border-radius: 250px;
-    clip: rect(0px, 250px, 500px, 0px);
-    transition: 500ms;
-  }
-  .chart:hover {
-    background-color: rgba(255, 255, 255, 0) !important;
-  }
-  
-  .hold {
-    position: absolute;
-    width: 500px;
-    height: 500px;
-    border-radius: 250px;
-    clip: rect(0px, 350px, 250px, 250px);
-  }
-
-  #chartSlice0 {
-    transform: rotate(0deg);
-  }
-  
-  #chartSlice1 {
-    transform: rotate(30deg);
-  }
-  
-  #chartSlice2 {
-    transform: rotate(60deg);
-  }
-  
-  #chartSlice3 {
-    transform: rotate(90deg);
-  }
-  #chartSlice4 {
-    transform: rotate(120deg);
-  }
-  
-  #chartSlice5 {
-    transform: rotate(150deg);
-  }
-  
-  #chartSlice6 {
-    transform: rotate(180deg);
-  }
-  
-  #chartSlice7 {
-    transform: rotate(210deg);
-  }
-  #chartSlice8 {
-    transform: rotate(240deg);
-  }
-  
-  #chartSlice9 {
-    transform: rotate(270deg);
-  }
-  
-  #chartSlice10 {
-    transform: rotate(300deg);
-  }
-  
-  #chartSlice11 {
-    transform: rotate(330deg);
-  }
-  
-
-
-  #chartSlice0 .chart {
-    background-color: #236e71;
-    transform: rotate(30deg);
-  }
-  
-  #chartSlice1 .chart {
-    background-color: #127473;
-    transform: rotate(30deg);
-  }
-  
-  #chartSlice2 .chart {
-    background-color: #007975;
-    transform: rotate(30deg);
-  }
-  
-  #chartSlice3 .chart {
-    background-color: #007e75;
-    transform: rotate(30deg);
-  }
-  #chartSlice4 .chart {
-    background-color: #008474;
-    transform: rotate(30deg);
-  }
-  
-  #chartSlice5 .chart {
-    background-color: #008972;
-    transform: rotate(30deg);
-  }
-  
-  #chartSlice6 .chart {
-    background-color: #008e6f;
-    transform: rotate(30deg);
-  }
-  
-  #chartSlice7 .chart {
-    background-color: #00936a;
-    transform: rotate(30deg);
-  }
-  #chartSlice8 .chart {
-    background-color: #009865;
-    transform: rotate(30deg);
-  }
-  
-  #chartSlice9 .chart {
-    background-color: #009c5e;
-    transform: rotate(30deg);
-  }
-  
-  #chartSlice10 .chart {
-    background-color: #00a157;
-    transform: rotate(30deg);
-  }
-  
-  #chartSlice11 .chart {
-    background-color: #1fa54e;
-    transform: rotate(30deg);
-  }
-  
+  /* OHM CHART */
+.ohmChartContainer {
+  background-color: black;
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 1%;
+  width: 100%;
+}
+.ohmChart {
+  align-items: center;
+  background-color: white;
+  border-radius: 25px;
+  color: black;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 25px;
+  max-width: 600px;
+  min-width: 600px;
+  max-height: 600px;
+  min-height: 600px;
+}
+.chart {
+  border-radius: 250px;
+  clip: rect(0px, 250px, 500px, 0px);
+  display: flex;
+  height: 500px;
+  justify-content: center;
+  position: absolute;
+  transform: rotate(30deg);
+  transition: 500ms;
+  width: 500px;
+  z-index: -1;
+}
+.chartInner {
+  border-radius: 125px;
+  clip: rect(0px, 125px, 250px, 0px);
+  display: flex;
+  height: 250px;
+  justify-content: center;
+  position: absolute;
+  transform: rotate(90deg);
+  transition: 500ms;
+  width: 250px;
+  z-index: -1;
+}
+.chartOuter {
+  border-radius: 300px;
+  clip: rect(0px, 300px, 600px, 0px);
+  display: flex;
+  height: 600px;
+  justify-content: center;
+  position: absolute;
+  transform: rotate(90deg);
+  transition: 500ms;
+  width: 600px;
+  z-index: -1;
+}
+.chartInner:hover {
+  background-color: black !important;
+  scale: 150%;
+}
+.hold {
+  border-radius: 250px;
+  clip: rect(0px, 375px, 250px, 250px);
+  height: 500px;
+  position: absolute;
+  width: 500px;
+}
+.holdInner {
+  border-radius: 125px;
+  clip: rect(0px, 250px, 125px, 125px);
+  height: 250px;
+  position: absolute;
+  width: 250px;
+}
+.holdOuter {
+  border-radius: 300px;
+  clip: rect(0px, 600px, 300px, 300px);
+  height: 600px;
+  position: absolute;
+  width: 600px;
+}
+#chartSlice0, #chartSlice1, #chartSlice2,
+#chartSlice3, #chartSlice4, #chartSlice5,
+#chartSlice6, #chartSlice7, #chartSlice8,
+#chartSlice9, #chartSlice10, #chartSlice11 {
+  display: flex;
+  justify-content: center;
+}
+#chartSlice0 p, #chartSlice1 p, #chartSlice2 p,
+#chartSlice3 p, #chartSlice4 p, #chartSlice5 p,
+#chartSlice6 p, #chartSlice7 p, #chartSlice8 p,
+#chartSlice9 p, #chartSlice10 p, #chartSlice11 p {
+  background-color: black;
+  border-radius: 15%;
+  color: white;
+  display: flex; 
+  font-size: 18px; 
+  margin-left: 100px;
+  margin-top: 45px;
+  position: absolute;
+  transform: rotate(calc(var(--sliceAngle) * -1));
+  transition: 500ms;
+}
+#chartSlice0 {
+  --sliceAngle: 0deg;
+  transform: rotate(var(--sliceAngle));
+}
+#chartSlice1 {
+  --sliceAngle: 30deg;
+  transform: rotate(var(--sliceAngle));
+}
+#chartSlice2 {
+  --sliceAngle: 60deg;
+  transform: rotate(var(--sliceAngle));
+}
+#chartSlice3 {
+  --sliceAngle: 90deg;
+  transform: rotate(var(--sliceAngle));
+}
+#chartSlice4 {
+  --sliceAngle: 120deg;
+  transform: rotate(var(--sliceAngle));
+}
+#chartSlice5 {
+  --sliceAngle: 150deg;
+  transform: rotate(var(--sliceAngle));
+}
+#chartSlice6 {
+  --sliceAngle: 180deg;
+  transform: rotate(var(--sliceAngle));
+}
+#chartSlice7 {
+  --sliceAngle: 210deg;
+  transform: rotate(var(--sliceAngle));
+}
+#chartSlice8 {
+  --sliceAngle: 240deg;
+  transform: rotate(var(--sliceAngle));
+}
+#chartSlice9 {
+  --sliceAngle: 270deg;
+  transform: rotate(var(--sliceAngle));
+}
+#chartSlice10 {
+  --sliceAngle: 300deg;
+  transform: rotate(var(--sliceAngle));
+}
+#chartSlice11 {
+  --sliceAngle: 330deg;
+  transform: rotate(var(--sliceAngle));
+}
+#chartSlice0 .chart {
+  background-color: #ff9999;
+}
+#chartSlice1 .chart {
+  background-color: #ffb681;
+}
+#chartSlice2 .chart {
+  background-color: #f6da7b;
+}
+#chartSlice3 .chart {
+  background-color: #ccff99;
+}
+#chartSlice4 .chart {
+  background-color: #a7ffc1;
+}
+#chartSlice5 .chart {
+  background-color: #93ffe5;
+}
+#chartSlice6 .chart {
+  background-color: #99ffff;
+}
+#chartSlice7 .chart {
+  background-color: #64e8ff;
+}
+#chartSlice8 .chart {
+  background-color: #84c7ff;
+}
+#chartSlice9 .chart {
+  background-color: #cc99ff;
+}
+#chartSlice10 .chart {
+  background-color: #f390da;
+}
+#chartSlice11 .chart {
+  background-color: #ff90b6;
+}
+#chartSliceInner0, #chartSliceOuter0 {
+  --sliceAngle: 0deg;
+  transform: rotate(var(--sliceAngle));
+}
+#chartSliceInner1, #chartSliceOuter1 {
+  --sliceAngle: 90deg;
+  transform: rotate(var(--sliceAngle));
+}
+#chartSliceInner2, #chartSliceOuter2 {
+  --sliceAngle: 180deg;
+  transform: rotate(var(--sliceAngle));
+}
+#chartSliceInner3, #chartSliceOuter3 {
+  --sliceAngle: 270deg;
+  transform: rotate(var(--sliceAngle));
+}
+#chartSliceInner0 .chartInner, #chartSliceOuter0 .chartOuter {
+  background-color: #ff6666;
+}
+#chartSliceInner1 .chartInner, #chartSliceOuter1 .chartOuter {
+  background-color: #b3ff66;
+}
+#chartSliceInner2 .chartInner, #chartSliceOuter2 .chartOuter {
+  background-color: #66ffff;
+}
+#chartSliceInner3 .chartInner, #chartSliceOuter3 .chartOuter {
+  background-color: #b366ff;
+}
