@@ -28,120 +28,166 @@ MURPHY M. LOPES
         <main>
             <div class="ohmChartContainer">
                 <div class="ohmChart" style="border-radius: 50%;">
-
                     <div id="chartSliceOuter0" class="holdOuter">
-                        <p style="position: absolute">stuff</p>
+                        <p>VOLTS</p>
                         <div class="chartOuter">
                         </div>
                     </div>
-
                     <div id="chartSliceOuter1" class="holdOuter">
+                        <p>OHMS</p>
                         <div class="chartOuter">
                         </div>
                     </div>
-
                     <div id="chartSliceOuter2" class="holdOuter">
+                        <p>WATTS</p>
                         <div class="chartOuter">
                         </div>
                     </div>
-
                     <div id="chartSliceOuter3" class="holdOuter">
+                        <p>AMPS</p>
                         <div class="chartOuter">
                         </div>
                     </div>
-                        
                     <div id="chartSlice0" class="hold">
                         <p>E = √<span style="text-decoration: overline;">P × R</span></p>
                         <div class="chart">
                         </div>
                     </div>
-                    
                     <div id="chartSlice1" class="hold">
                         <p>E = P ÷ I </p>
                         <div class="chart">
                         </div>
                     </div>
-                    
                     <div id="chartSlice2" class="hold">
                         <p>E = I × R</p>
                         <div class="chart">
                         </div>
                     </div>
-                    
                     <div id="chartSlice3" class="hold">
                         <p>R = E ÷ I</p>
                         <div class="chart">
                         </div>
                     </div>
-
                     <div id="chartSlice4" class="hold">
                         <p>R = E&#178 ÷ P</p>
                         <div class="chart">
                         </div>
                     </div>
-                    
                     <div id="chartSlice5" class="hold">
                         <p>R = P ÷ I&#178</p>
                         <div class="chart">
                         </div>
                     </div>
-                    
                     <div id="chartSlice6" class="hold">
                         <p>P = E&#178 ÷ R</p>
                         <div class="chart">
                         </div>
                     </div>
-                    
                     <div id="chartSlice7" class="hold">
                         <p>P = I&#178 × R</p>
                         <div class="chart">
                         </div>
                     </div>
-
                     <div id="chartSlice8" class="hold">
                         <p>P = E × I</p>
                         <div class="chart">
                         </div>
                     </div>
-                    
                     <div id="chartSlice9" class="hold">
                         <p>I = E ÷ R</p>
                         <div class="chart">
                         </div>
                     </div>
-                    
                     <div id="chartSlice10" class="hold">
                         <p>I = P ÷ E</p>
                         <div class="chart">
                         </div>
                     </div>
-                    
                     <div id="chartSlice11" class="hold">
                         <p>I = √<span style="text-decoration: overline;">P ÷ R</span></p>
                         <div class="chart">
                         </div>
                     </div>
-
                     <div id="chartSliceInner0" class="holdInner">
+                        <p style="margin-bottom: 57%; margin-right: 2%;">E</p>
+                        <div id="calcContainer">
+                            <div id="calcLabelContainer">
+                                <label class="calcLabelBox">R</label>
+                                <label class="calcLabelBox">P</label>
+                                <label class="calcLabelBox">I</label>
+                            </div>
+                            <div id="calcInputContainer">
+                                <input type="number" class="calcTextBox" id="ohmBox" oninput="validateToEnable()">
+                                <input type="number" class="calcTextBox" id="wattBox" oninput="validateToEnable()">
+                                <input type="number" class="calcTextBox" id="ampBox" oninput="validateToEnable()">
+                            </div>
+                        </div>
+                        <div id="calcButtonContainer">
+                            <input type="button" id="calcButton" onclick="calculate()" value="CALCULATE" disabled>
+                        </div>
                         <div class="chartInner">
                         </div>
                     </div>
-
                     <div id="chartSliceInner1" class="holdInner">
+                        <p style="margin-right: 1%;">R</p>
+                        <div id="calcContainer" style="margin-left: 100px; margin-bottom: 125px; transform: rotate(-90deg);">
+                            <div id="calcLabelContainer">
+                                <label class="calcLabelBox">E</label>
+                                <label class="calcLabelBox">P</label>
+                                <label class="calcLabelBox">I</label>
+                            </div>
+                            <div id="calcInputContainer">
+                                <input type="number" class="calcTextBox" id="ohmBox" oninput="validateToEnable()">
+                                <input type="number" class="calcTextBox" id="wattBox" oninput="validateToEnable()">
+                                <input type="number" class="calcTextBox" id="ampBox" oninput="validateToEnable()">
+                            </div>
+                        </div>
+                        <div id="calcButtonContainer" style="margin-left: 200px; margin-bottom: 125px; transform: rotate(-90deg);">
+                            <input type="button" id="calcButton" onclick="calculate()" value="CALCULATE" disabled>
+                        </div>
                         <div class="chartInner">
                         </div>
                     </div>
-
                     <div id="chartSliceInner2" class="holdInner">
+                        <p style="margin-left: 36%;">P</p>
+                        <div id="calcContainer" style="margin-left: 125px; margin-bottom: 100px; transform: rotate(-180deg);">
+                            <div id="calcLabelContainer">
+                                <label class="calcLabelBox">E</label>
+                                <label class="calcLabelBox">R</label>
+                                <label class="calcLabelBox">I</label>
+                            </div>
+                            <div id="calcInputContainer">
+                                <input type="number" class="calcTextBox" id="ohmBox" oninput="validateToEnable()">
+                                <input type="number" class="calcTextBox" id="wattBox" oninput="validateToEnable()">
+                                <input type="number" class="calcTextBox" id="ampBox" oninput="validateToEnable()">
+                            </div>
+                        </div>
+                        <div id="calcButtonContainer" style="margin-left: 125px; margin-bottom: 200px; transform: rotate(-180deg);">
+                            <input type="button" id="calcButton" onclick="calculate()" value="CALCULATE" disabled>
+                        </div>
                         <div class="chartInner">
                         </div>
                     </div>
-
                     <div id="chartSliceInner3" class="holdInner">
+                        <p>I</p>
+                        <div id="calcContainer" style="margin-left: 150px; margin-bottom: 125px; transform: rotate(-270deg);">
+                            <div id="calcLabelContainer">
+                                <label class="calcLabelBox">E</label>
+                                <label class="calcLabelBox">R</label>
+                                <label class="calcLabelBox">P</label>
+                            </div>
+                            <div id="calcInputContainer">
+                                <input type="number" class="calcTextBox" id="ohmBox" oninput="validateToEnable()">
+                                <input type="number" class="calcTextBox" id="wattBox" oninput="validateToEnable()">
+                                <input type="number" class="calcTextBox" id="ampBox" oninput="validateToEnable()">
+                            </div>
+                        </div>
+                        <div id="calcButtonContainer" style="margin-left: 50px; margin-bottom: 125px; transform: rotate(-270deg);">
+                            <input type="button" id="calcButton" onclick="calculate()" value="CALCULATE" disabled>
+                        </div>
                         <div class="chartInner">
                         </div>
                     </div>
-                        
                 </div>
             </div>
         </main>

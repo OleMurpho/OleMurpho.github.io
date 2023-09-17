@@ -172,7 +172,7 @@ main {
   z-index: -1;
 }
 .chartInner {
-  border-radius: 125px;
+  border-radius: 25px;
   clip: rect(0px, 125px, 250px, 0px);
   display: flex;
   height: 250px;
@@ -194,10 +194,6 @@ main {
   transition: 500ms;
   width: 600px;
   z-index: -1;
-}
-.chartInner:hover {
-  background-color: black !important;
-  scale: 150%;
 }
 .hold {
   border-radius: 250px;
@@ -326,31 +322,145 @@ main {
 #chartSlice11 .chart {
   background-color: #ff90b6;
 }
+#chartSliceInner0, #chartSliceOuter0, 
+#chartSliceInner1, #chartSliceOuter1, 
+#chartSliceInner2, #chartSliceOuter2, 
+#chartSliceInner3, #chartSliceOuter3 {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transform: rotate(var(--sliceAngle));
+}
 #chartSliceInner0, #chartSliceOuter0 {
   --sliceAngle: 0deg;
-  transform: rotate(var(--sliceAngle));
 }
 #chartSliceInner1, #chartSliceOuter1 {
   --sliceAngle: 90deg;
-  transform: rotate(var(--sliceAngle));
 }
 #chartSliceInner2, #chartSliceOuter2 {
   --sliceAngle: 180deg;
-  transform: rotate(var(--sliceAngle));
 }
 #chartSliceInner3, #chartSliceOuter3 {
   --sliceAngle: 270deg;
-  transform: rotate(var(--sliceAngle));
 }
-#chartSliceInner0 .chartInner, #chartSliceOuter0 .chartOuter {
+#chartSliceInner0 .chartInner, 
+#chartSliceOuter0 .chartOuter {
   background-color: #ff6666;
 }
-#chartSliceInner1 .chartInner, #chartSliceOuter1 .chartOuter {
+#chartSliceInner1 .chartInner, 
+#chartSliceOuter1 .chartOuter {
   background-color: #b3ff66;
 }
-#chartSliceInner2 .chartInner, #chartSliceOuter2 .chartOuter {
+#chartSliceInner2 .chartInner, 
+#chartSliceOuter2 .chartOuter {
   background-color: #66ffff;
 }
-#chartSliceInner3 .chartInner, #chartSliceOuter3 .chartOuter {
+#chartSliceInner3 .chartInner, 
+#chartSliceOuter3 .chartOuter {
   background-color: #b366ff;
+}
+#chartSliceOuter0 p, #chartSliceOuter1 p, 
+#chartSliceOuter2 p, #chartSliceOuter3 p {
+  background-color: black;
+  border-radius: 15%;
+  color: white;
+  display: flex; 
+  font-size: 24px;
+  margin-bottom: 66.6%;
+  margin-left: 66.6%;
+  position:absolute;
+}
+#chartSliceOuter0 p, #chartSliceOuter3 p {
+  transform: rotate(45deg);
+}
+#chartSliceOuter1 p, #chartSliceOuter2 p {
+  transform: rotate(225deg);
+}
+#chartSliceInner0 p, #chartSliceInner1 p, 
+#chartSliceInner2 p, #chartSliceInner3 p {
+  background-color: black;
+  border-radius: 15%;
+  color: white;
+  font-size: 44px;
+  margin-bottom: 55%;
+  margin-left: 40%;
+  position:absolute;
+}
+#chartSliceInner0 p, #chartSliceInner3 p {
+  transform: rotate(45deg)
+}
+#chartSliceInner1 p, #chartSliceInner2 p {
+  transform: rotate(-135deg);
+}
+#chartSliceInner0:hover p, #chartSliceInner1:hover p,
+#chartSliceInner2:hover p, #chartSliceInner3:hover p {
+  display: none;
+}
+#chartSliceInner0:hover #chartInner, #chartSliceInner1:hover #chartInner,
+#chartSliceInner2:hover #chartInner, #chartSliceInner3:hover #chartInner {
+  display: none;
+}
+#chartSliceInner0:hover #calcContainer, 
+#chartSliceInner1:hover #calcContainer,
+#chartSliceInner2:hover #calcContainer, 
+#chartSliceInner3:hover #calcContainer {
+  display: flex;
+}
+#chartSliceInner0:hover #calcButtonContainer, 
+#chartSliceInner1:hover #calcButtonContainer,
+#chartSliceInner2:hover #calcButtonContainer, 
+#chartSliceInner3:hover #calcButtonContainer {
+  display: flex;
+}
+#calcContainer {
+  align-items: center;
+  display: none;
+  flex-direction: row;
+  margin-bottom: 60%;
+  margin-left: 50%;
+  position: absolute;
+  width:min-content;
+}
+#calcLabelContainer {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  float: left;
+  height: 80%;
+  justify-content: space-around;
+  width: 30%;
+}
+#calcInputContainer {
+  display: flex;
+  flex-direction: column;
+  float: right;
+  height: 80%;
+  width: 80%;
+}
+#calcButtonContainer {
+  display: none;
+  flex-direction: row;
+  height: 10%;
+  justify-content: center;
+  margin-bottom: 20%;
+  margin-left: 50%;
+  width: 100%;
+}
+.calcLabelBox {
+  background-color: black;
+  border-radius: 15%;
+  margin: .2px;
+  padding: 1.5px;
+  width: 33px;
+}
+.calcTextBox {
+  background-color: black;
+  color: white;
+  width: 66px;
+}
+#calcButton {
+  height: 25px;
+  margin-right: 5px;
+  width: 100px;
 }
