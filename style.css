@@ -459,7 +459,7 @@ main {
   color: white;
   width: 66px;
 }
-#calcButton {
+.calcButton {
   height: 25px;
   margin-right: 5px;
   width: 100px;
