@@ -5,6 +5,8 @@
  */
 
 "use strict";
+
+//dollar store jQuery.
 var $ = function(id) { return document.getElementById(id); };
 
 //chartSliceInner input boxes.
@@ -20,6 +22,20 @@ var voltBox3 = $("voltBox3");
 var wattBox0 = $("wattBox0");
 var wattBox1 = $("wattBox1");
 var wattBox3 = $("wattBox3");
+
+//input box booleans.
+var ampBox0Valid = false;
+var ampBox1Valid = false;
+var ampBox2Valid = false;
+var ohmBox0Valid = false;
+var ohmBox2Valid = false;
+var ohmBox3Valid = false;
+var voltBox1Valid = false;
+var voltBox2Valid = false;
+var voltBox3Valid = false;
+var wattBox0Valid = false;
+var wattBox1Valid = false;
+var wattBox3Valid = false;
 
 //chartSliceInner paragraphs.
 var bigAmp = $("bigAmp");
@@ -64,3 +80,70 @@ var wattSpan1R = $("wattSpan1R");
 var wattSpan2P = $("wattSpan2P");
 var wattSpan2E = $("wattSpan2E");
 var wattSpan2I = $("wattSpan2I");
+
+//global variables.
+var cornerVar = 5;
+var validAmpBoxes = 0;
+var validOhmBoxes = 0;
+var validVoltBoxes = 0;
+var validWattBoxes = 0;
+var currentAmps;
+var currentOhms;
+var currentVolts;
+var currentWatts;
+
+//validateToEnable.
+function validateToEnable()
+{
+    //Acquire last digit of active element id.
+    var activeID = document.activeElement.id;
+    cornerVar = activeID.slice(activeID.length -1);
+    
+    //Check current box value.
+    var currentValue = $(activeID).value;
+    if (currentValue.length > 0 && !isNaN(currentValue))
+    {
+        switch (cornerVar * 1)
+        {
+            case 0:
+                switch (activeID)
+                {
+                    case "ampBox0":
+                        ampBox0Valid = true;
+                        break;
+                    case "ohmBox0":
+                        ohmBox0Valid = true;
+                        break;
+                    case "wattBox0":
+                        wattBox0Valid = true;
+                        break; 
+                }
+                break;
+            case 1:
+                validOhmBoxes++;
+                break;
+            case 2:
+                validWattBoxes++;
+                break;
+            case 3:
+                validAmpBoxes++;
+                break;
+        }
+    }
+    if (validVoltBoxes > 1)
+    {
+        $("calcButton0").disabled = false;
+    }
+    if (validOhmBoxes > 1)
+    {
+        $("calcButton1").disabled = false;
+    }
+    if (validWattBoxes > 1)
+    {
+        $("calcButton2").disabled = false;
+    }
+    if (validAmpBoxes > 1)
+    {
+        $("calcButton3").disabled = false;
+    }
+}
