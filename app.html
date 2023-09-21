@@ -8,7 +8,6 @@ MURPHY M. LOPES
     <head>
         <title>Murphy M. Lopes' Github Page</title>
         <link rel="stylesheet" href="style.css">
-        <script src="ohmChart.js"></script>
         <meta charset="utf-8">
         <meta name="description" content="Murphin' Around.">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -67,9 +66,9 @@ MURPHY M. LOPES
                     <!-- chartSlice0 -->
                     <div id="chartSlice0" class="hold">
                         <p>
-                            <span id="voltSpan0E">E</span> = √
+                            √
                             <span style="text-decoration: overline;">
-                                <span id="voltSpan0P">P</span> × 
+                                <span id="voltSpan0P">P</span> ×
                                 <span id="voltSpan0R">R</span>
                             </span>
                         </p>
@@ -80,7 +79,6 @@ MURPHY M. LOPES
                     <!-- chartSlice1 -->
                     <div id="chartSlice1" class="hold">
                         <p>
-                            <span id="voltSpan1E">E</span> = 
                             <span id="voltSpan1P">P</span> ÷ 
                             <span id="voltSpan1I">I</span>
                         </p>
@@ -91,7 +89,6 @@ MURPHY M. LOPES
                     <!-- chartSlice2 -->
                     <div id="chartSlice2" class="hold">
                         <p>
-                            <span id="voltSpan2E">E</span> = 
                             <span id="voltSpan2I">I</span> × 
                             <span id="voltSpan2R">R</span>
                         </p>
@@ -102,11 +99,9 @@ MURPHY M. LOPES
                     <!-- chartSlice3 -->
                     <div id="chartSlice3" class="hold">
                         <p>
-                            <span id="ohmSpan0R">R</span> = 
                             <span id="ohmSpan0E">E</span> ÷ 
                             <span id="ohmSpan0I">I</span>
                         </p>
-                        <p>R = E ÷ I</p>
                         <div class="chart">
                         </div>
                     </div>
@@ -114,7 +109,6 @@ MURPHY M. LOPES
                     <!-- chartSlice4 -->
                     <div id="chartSlice4" class="hold">
                         <p>
-                            <span id="ohmSpan1R">R</span> = 
                             <span id="ohmSpan1E">E</span>&#178 ÷ 
                             <span id="ohmSpan1P">P</span>
                         </p>
@@ -125,7 +119,6 @@ MURPHY M. LOPES
                     <!-- chartSlice5 -->
                     <div id="chartSlice5" class="hold">
                         <p>
-                            <span id="ohmSpan2R">R</span> = 
                             <span id="ohmSpan2P">P</span> ÷ 
                             <span id="ohmSpan2I">I</span>&#178
                         </p>
@@ -136,7 +129,6 @@ MURPHY M. LOPES
                     <!-- chartSlice6 -->
                     <div id="chartSlice6" class="hold">
                         <p>
-                            <span id="wattSpan0P">P</span> = 
                             <span id="wattSpan0E">E</span>&#178 ÷ 
                             <span id="wattSpan0R">R</span>
                         </p>
@@ -147,7 +139,6 @@ MURPHY M. LOPES
                     <!-- chartSlice7 -->
                     <div id="chartSlice7" class="hold">
                         <p>
-                            <span id="wattSpan1P">P</span> = 
                             <span id="wattSpan1I">I</span>&#178 × 
                             <span id="wattSpan1R">R</span>
                         </p>
@@ -158,7 +149,6 @@ MURPHY M. LOPES
                     <!-- chartSlice8 -->
                     <div id="chartSlice8" class="hold">
                         <p>
-                            <span id="wattSpan2P">P</span> = 
                             <span id="wattSpan2E">E</span> × 
                             <span id="wattSpan2I">I</span>
                         </p>
@@ -169,7 +159,6 @@ MURPHY M. LOPES
                     <!-- chartSlice9 -->
                     <div id="chartSlice9" class="hold">
                         <p>
-                            <span id="ampSpan0I">I</span> = 
                             <span id="ampSpan0E">E</span> ÷ 
                             <span id="ampSpan0R">R</span>
                         </p>
@@ -180,7 +169,6 @@ MURPHY M. LOPES
                     <!-- chartSlice10 -->
                     <div id="chartSlice10" class="hold">
                         <p>
-                            <span id="ampSpan1I">I</span> = 
                             <span id="ampSpan1P">P</span> ÷ 
                             <span id="ampSpan1E">E</span>
                         </p>
@@ -191,9 +179,9 @@ MURPHY M. LOPES
                     <!-- chartSlice11 -->
                     <div id="chartSlice11" class="hold">
                         <p>
-                            <span id="ampSpan2I">I</span> = √
+                            √
                             <span style="text-decoration: overline;">
-                                <span id="ampSpan2P">P</span> ÷ 
+                                <span id="ampSpan2P">P</span> ÷
                                 <span id="ampSpan2R">R</span>
                             </span>
                         </p>
@@ -206,7 +194,7 @@ MURPHY M. LOPES
 
                     <!-- chartSliceInner0 -->
                     <div id="chartSliceInner0" class="holdInner">
-                        <p id="bigVolt" style="margin-bottom: 57%; margin-right: 2%;">E</p>
+                        <p id="bigVolt"style="margin-left: 50%; margin-top: 10%;">E</p>
                         <div id="calcContainer">
                             <div id="calcLabelContainer">
                                 <label class="calcLabelBox">R</label>
@@ -220,7 +208,7 @@ MURPHY M. LOPES
                             </div>
                         </div>
                         <div id="calcButtonContainer">
-                            <input type="button" class="calcButton" id="calcButton0" onclick="calculate()" value="CALCULATE" disabled>
+                            <input type="button" class="calcButton" id="calcButton0" onclick="calculateVolts()" value="CALCULATE" disabled>
                         </div>
                         <div class="chartInner">
                         </div>
@@ -228,7 +216,7 @@ MURPHY M. LOPES
 
                     <!-- chartSliceInner1 -->
                     <div id="chartSliceInner1" class="holdInner">
-                        <p id="bigOhm" style="margin-right: 1%;">R</p>
+                        <p id="bigOhm" style="margin-left: 45%; margin-top: 6%;">R</p>
                         <div id="calcContainer" style="margin-left: 100px; margin-bottom: 125px; transform: rotate(-90deg);">
                             <div id="calcLabelContainer">
                                 <label class="calcLabelBox">E</label>
@@ -242,7 +230,7 @@ MURPHY M. LOPES
                             </div>
                         </div>
                         <div id="calcButtonContainer" style="margin-left: 200px; margin-bottom: 125px; transform: rotate(-90deg);">
-                            <input type="button" class="calcButton" id="calcButton1" onclick="calculate()" value="CALCULATE" disabled>
+                            <input type="button" class="calcButton" id="calcButton1" onclick="calculateOhms()" value="CALCULATE" disabled>
                         </div>
                         <div class="chartInner">
                         </div>
@@ -250,7 +238,7 @@ MURPHY M. LOPES
 
                     <!-- chartSliceInner2 -->
                     <div id="chartSliceInner2" class="holdInner">
-                        <p id="bigWatt" style="margin-left: 36%;">P</p>
+                        <p id="bigWatt" style="margin-left: 50%; margin-top: 10%;">P</p>
                         <div id="calcContainer" style="margin-left: 125px; margin-bottom: 100px; transform: rotate(-180deg);">
                             <div id="calcLabelContainer">
                                 <label class="calcLabelBox">E</label>
@@ -264,7 +252,7 @@ MURPHY M. LOPES
                             </div>
                         </div>
                         <div id="calcButtonContainer" style="margin-left: 125px; margin-bottom: 200px; transform: rotate(-180deg);">
-                            <input type="button" class="calcButton" id="calcButton2" onclick="calculate()" value="CALCULATE" disabled>
+                            <input type="button" class="calcButton" id="calcButton2" onclick="calculateWatts()" value="CALCULATE" disabled>
                         </div>
                         <div class="chartInner">
                         </div>
@@ -272,8 +260,8 @@ MURPHY M. LOPES
 
                     <!-- chartSliceInner3 -->
                     <div id="chartSliceInner3" class="holdInner">
-                        <p id="bigAmp">I</p>
-                        <div id="calcContainer" style="margin-left: 150px; margin-bottom: 125px; transform: rotate(-270deg);">
+                        <p id="bigAmp"style="margin-left: 45%; margin-top: 6%;">I</p>
+                        <div id="calcContainer" style="transform: rotate(-270deg);">
                             <div id="calcLabelContainer">
                                 <label class="calcLabelBox">E</label>
                                 <label class="calcLabelBox">R</label>
@@ -286,7 +274,7 @@ MURPHY M. LOPES
                             </div>
                         </div>
                         <div id="calcButtonContainer" style="margin-left: 50px; margin-bottom: 125px; transform: rotate(-270deg);">
-                            <input type="button" class="calcButton" id="calcButton3" onclick="calculate()" value="CALCULATE" disabled>
+                            <input type="button" class="calcButton" id="calcButton3" onclick="calculateAmps()" value="CALCULATE" disabled>
                         </div>
                         <div class="chartInner">
                         </div>
@@ -294,5 +282,6 @@ MURPHY M. LOPES
                 </div>
             </div>
         </main>
+        <script src="ohmChart.js"></script>
     </body>
 </html>

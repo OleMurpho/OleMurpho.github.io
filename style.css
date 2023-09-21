@@ -231,12 +231,15 @@ main {
   border-radius: 15%;
   color: white;
   display: flex; 
-  font-size: 18px; 
-  margin-left: 100px;
+  font-size: 16px; 
+  margin-left: 110px;
   margin-top: 45px;
+  max-width: 150px;
   position: absolute;
   transform: rotate(calc(var(--sliceAngle) * -1));
   transition: 500ms;
+  width: fit-content;
+  word-break:normal;
 }
 #chartSlice0 {
   --sliceAngle: 0deg;
@@ -382,16 +385,22 @@ main {
   background-color: black;
   border-radius: 15%;
   color: white;
-  font-size: 44px;
+  font-size: 36px;
   margin-bottom: 55%;
   margin-left: 40%;
   position:absolute;
 }
-#chartSliceInner0 p, #chartSliceInner3 p {
-  transform: rotate(45deg)
+#chartSliceInner0 p {
+  transform: rotate(0deg)
 }
-#chartSliceInner1 p, #chartSliceInner2 p {
-  transform: rotate(-135deg);
+#chartSliceInner1 p {
+  transform: rotate(270deg);
+}
+#chartSliceInner2 p {
+  transform: rotate(180deg);
+}
+#chartSliceInner3 p {
+  transform: rotate(90deg);
 }
 #chartSliceInner0:hover p, #chartSliceInner1:hover p,
 #chartSliceInner2:hover p, #chartSliceInner3:hover p {
