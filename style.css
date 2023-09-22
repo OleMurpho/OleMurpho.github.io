@@ -227,9 +227,8 @@ main {
 #chartSlice3 p, #chartSlice4 p, #chartSlice5 p,
 #chartSlice6 p, #chartSlice7 p, #chartSlice8 p,
 #chartSlice9 p, #chartSlice10 p, #chartSlice11 p {
-  background-color: black;
   border-radius: 15%;
-  color: white;
+  color: black;
   display: flex; 
   font-size: 16px; 
   margin-left: 110px;
@@ -365,9 +364,8 @@ main {
 }
 #chartSliceOuter0 p, #chartSliceOuter1 p, 
 #chartSliceOuter2 p, #chartSliceOuter3 p {
-  background-color: black;
   border-radius: 15%;
-  color: white;
+  color: black;
   display: flex; 
   font-size: 24px;
   margin-bottom: 66.6%;
@@ -382,9 +380,8 @@ main {
 }
 #chartSliceInner0 p, #chartSliceInner1 p, 
 #chartSliceInner2 p, #chartSliceInner3 p {
-  background-color: black;
   border-radius: 15%;
-  color: white;
+  color: black;
   font-size: 36px;
   margin-bottom: 55%;
   margin-left: 40%;
