@@ -6,7 +6,9 @@ MURPHY M. LOPES
 
 /* SITE GLOBAL */
 * { 
-  box-sizing: border-box; 
+  box-sizing: border-box;
+  font-family:Arial, Helvetica, sans-serif;
+  letter-spacing: -2px;
 }
 header {
   align-items:center;
