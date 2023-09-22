@@ -402,74 +402,43 @@ main {
 #chartSliceInner3 p {
   transform: rotate(90deg);
 }
-#chartSliceInner0:hover p, #chartSliceInner1:hover p,
-#chartSliceInner2:hover p, #chartSliceInner3:hover p {
-  display: none;
-}
-#chartSliceInner0:hover #chartInner, #chartSliceInner1:hover #chartInner,
-#chartSliceInner2:hover #chartInner, #chartSliceInner3:hover #chartInner {
-  display: none;
-}
-#chartSliceInner0:hover #calcContainer, 
-#chartSliceInner1:hover #calcContainer,
-#chartSliceInner2:hover #calcContainer, 
-#chartSliceInner3:hover #calcContainer {
-  display: flex;
-}
-#chartSliceInner0:hover #calcButtonContainer, 
-#chartSliceInner1:hover #calcButtonContainer,
-#chartSliceInner2:hover #calcButtonContainer, 
-#chartSliceInner3:hover #calcButtonContainer {
-  display: flex;
-}
-#calcContainer {
-  align-items: center;
-  display: none;
-  flex-direction: row;
-  margin-bottom: 60%;
-  margin-left: 50%;
-  position: absolute;
-  width:min-content;
-}
-#calcLabelContainer {
-  color: white;
-  display: flex;
-  flex-direction: column;
-  float: left;
-  height: 80%;
-  justify-content: space-around;
-  width: 30%;
-}
-#calcInputContainer {
-  display: flex;
-  flex-direction: column;
-  float: right;
-  height: 80%;
-  width: 80%;
-}
-#calcButtonContainer {
-  display: none;
-  flex-direction: row;
-  height: 10%;
-  justify-content: center;
-  margin-bottom: 20%;
-  margin-left: 50%;
-  width: 100%;
-}
-.calcLabelBox {
-  background-color: black;
-  border-radius: 15%;
-  margin: .2px;
-  padding: 1.5px;
-  width: 33px;
-}
-.calcTextBox {
+#ampBox {
   background-color: black;
   color: white;
+  margin-bottom: 49%;
+  margin-left: 15%;
+  transform: rotate(90deg);
   width: 66px;
 }
-.calcButton {
-  height: 25px;
-  margin-right: 5px;
-  width: 100px;
+#ohmBox {
+  background-color: black;
+  color: white;
+  margin-bottom: 49%;
+  margin-left: 15%;
+  transform: rotate(270deg);
+  width: 66px;
+}
+#voltBox {
+  background-color: black;
+  color: white;
+  margin-bottom: 15%;
+  margin-left: 49%;
+  width: 66px;
+}
+#wattBox {
+  background-color: black;
+  color: white;
+  margin-bottom: 15%;
+  margin-left: 49%;
+  transform: rotate(180deg);
+  width: 66px;
+}
+#calcButton {
+  background-image: conic-gradient(#66ffff, #b366ff, #ff6666, #b3ff66);
+  border-radius: 50%;
+  color: white;
+  height: 50px;
+  padding: 0px;
+  width: 50px;
+  z-index: 25;
 }

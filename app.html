@@ -1,6 +1,6 @@
 <!--
 MURPHY M. LOPES
-09/08/2023
+09/21/2023
 [app.html]
 -->
 <!DOCTYPE html>
@@ -195,90 +195,31 @@ MURPHY M. LOPES
                     <!-- chartSliceInner0 -->
                     <div id="chartSliceInner0" class="holdInner">
                         <p id="bigVolt"style="margin-left: 50%; margin-top: 10%;">E</p>
-                        <div id="calcContainer">
-                            <div id="calcLabelContainer">
-                                <label class="calcLabelBox">R</label>
-                                <label class="calcLabelBox">P</label>
-                                <label class="calcLabelBox">I</label>
-                            </div>
-                            <div id="calcInputContainer">
-                                <input type="number" class="calcTextBox" id="ohmBox0" oninput="validateToEnable()">
-                                <input type="number" class="calcTextBox" id="wattBox0" oninput="validateToEnable()">
-                                <input type="number" class="calcTextBox" id="ampBox0" oninput="validateToEnable()">
-                            </div>
-                        </div>
-                        <div id="calcButtonContainer">
-                            <input type="button" class="calcButton" id="calcButton0" onclick="calculateVolts()" value="CALCULATE" disabled>
-                        </div>
-                        <div class="chartInner">
-                        </div>
+                        <input type="number" id="voltBox" oninput="validateToEnable()">
+                        <div class="chartInner"></div>
                     </div>
 
                     <!-- chartSliceInner1 -->
                     <div id="chartSliceInner1" class="holdInner">
                         <p id="bigOhm" style="margin-left: 45%; margin-top: 6%;">R</p>
-                        <div id="calcContainer" style="margin-left: 100px; margin-bottom: 125px; transform: rotate(-90deg);">
-                            <div id="calcLabelContainer">
-                                <label class="calcLabelBox">E</label>
-                                <label class="calcLabelBox">P</label>
-                                <label class="calcLabelBox">I</label>
-                            </div>
-                            <div id="calcInputContainer">
-                                <input type="number" class="calcTextBox" id="voltBox1" oninput="validateToEnable()">
-                                <input type="number" class="calcTextBox" id="wattBox1" oninput="validateToEnable()">
-                                <input type="number" class="calcTextBox" id="ampBox1" oninput="validateToEnable()">
-                            </div>
-                        </div>
-                        <div id="calcButtonContainer" style="margin-left: 200px; margin-bottom: 125px; transform: rotate(-90deg);">
-                            <input type="button" class="calcButton" id="calcButton1" onclick="calculateOhms()" value="CALCULATE" disabled>
-                        </div>
-                        <div class="chartInner">
-                        </div>
+                        <input type="number" id="ohmBox" oninput="validateToEnable()">
+                        <div class="chartInner"></div>
                     </div>
 
                     <!-- chartSliceInner2 -->
                     <div id="chartSliceInner2" class="holdInner">
                         <p id="bigWatt" style="margin-left: 50%; margin-top: 10%;">P</p>
-                        <div id="calcContainer" style="margin-left: 125px; margin-bottom: 100px; transform: rotate(-180deg);">
-                            <div id="calcLabelContainer">
-                                <label class="calcLabelBox">E</label>
-                                <label class="calcLabelBox">R</label>
-                                <label class="calcLabelBox">I</label>
-                            </div>
-                            <div id="calcInputContainer">
-                                <input type="number" class="calcTextBox" id="voltBox2" oninput="validateToEnable()">
-                                <input type="number" class="calcTextBox" id="ohmBox2" oninput="validateToEnable()">
-                                <input type="number" class="calcTextBox" id="ampBox2" oninput="validateToEnable()">
-                            </div>
-                        </div>
-                        <div id="calcButtonContainer" style="margin-left: 125px; margin-bottom: 200px; transform: rotate(-180deg);">
-                            <input type="button" class="calcButton" id="calcButton2" onclick="calculateWatts()" value="CALCULATE" disabled>
-                        </div>
-                        <div class="chartInner">
-                        </div>
+                        <input type="number" id="wattBox" oninput="validateToEnable()">
+                        <div class="chartInner"></div>
                     </div>
 
                     <!-- chartSliceInner3 -->
                     <div id="chartSliceInner3" class="holdInner">
                         <p id="bigAmp"style="margin-left: 45%; margin-top: 6%;">I</p>
-                        <div id="calcContainer" style="transform: rotate(-270deg);">
-                            <div id="calcLabelContainer">
-                                <label class="calcLabelBox">E</label>
-                                <label class="calcLabelBox">R</label>
-                                <label class="calcLabelBox">P</label>
-                            </div>
-                            <div id="calcInputContainer">
-                                <input type="number" class="calcTextBox" id="voltBox3" oninput="validateToEnable()">
-                                <input type="number" class="calcTextBox" id="ohmBox3" oninput="validateToEnable()">
-                                <input type="number" class="calcTextBox" id="wattBox3" oninput="validateToEnable()">
-                            </div>
-                        </div>
-                        <div id="calcButtonContainer" style="margin-left: 50px; margin-bottom: 125px; transform: rotate(-270deg);">
-                            <input type="button" class="calcButton" id="calcButton3" onclick="calculateAmps()" value="CALCULATE" disabled>
-                        </div>
-                        <div class="chartInner">
-                        </div>
+                        <input type="number" id="ampBox" oninput="validateToEnable()">
+                        <div class="chartInner"></div>
                     </div>
+                    <input type="button" id="calcButton" value="ENTER" onclick="calculate()" disabled>
                 </div>
             </div>
         </main>
