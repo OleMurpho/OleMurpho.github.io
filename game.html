@@ -33,16 +33,15 @@ MURPHY M. LOPES
                         <h3 style="text-align:center; margin:5px;">
                             Fragment is a procedurally generating rolling platformer. The game's code does not
                              differentiate between beatable and unbeatable levels, so press T to skip a level.
-                             <span style="color:red">Red balls not working, sorry.</span>
                         </h3>
                         <div id="fragmentGameplayDiv">
                             <div id="fragmentGameplayInnerDiv">
                                 <h2 style="text-align: center; line-height: 150%;">
-                                    <span style="color:yellow; font-size: xx-large;">&#8593</span>: W<br>
-                                    <span style="color:yellow; font-size: xx-large;">&#8592</span>: A<br>
-                                    <span style="color:yellow; font-size: xx-large;">&#8595</span>: S<br>
-                                    <span style="color:yellow; font-size: xx-large;">&#8594</span>: D<br>
-                                    <span style="color:yellow; font-size: xx-large;">&#8631</span>: T<br>
+                                    <span style="color:orange; font-size: xx-large;">&#8593</span>: W<br>
+                                    <span style="color:orange; font-size: xx-large;">&#8592</span>: A<br>
+                                    <span style="color:orange; font-size: xx-large;">&#8595</span>: S<br>
+                                    <span style="color:orange; font-size: xx-large;">&#8594</span>: D<br>
+                                    <span style="color:orange; font-size: xx-large;">&#8631</span>: T<br>
                                 </h2>
                             </div>
                             <div id="fragmentGameplayInnerDiv">
@@ -62,6 +61,7 @@ MURPHY M. LOPES
                                 </h2>
                             </div>
                         </div>
+                        <input type="button" id="fragmentPlayButton" onclick="playFragment()">
                     </div>
                     <div id="fragmentGameDiv">
                         <canvas id="unity-canvas" width=768 height=480 style="width: 768px; height: 480px; background: #312c2c"></canvas>
@@ -83,5 +83,6 @@ MURPHY M. LOPES
                 </div>
             </div>
         </main>
+        <script src="fragment.js"></script>
     </body>
 </html>
