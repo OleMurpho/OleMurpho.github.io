@@ -12,8 +12,8 @@ function playFragment() {
     (
         document.querySelector("#unity-canvas"), 
         {
-            dataUrl: "Build/FragmentAlphaWebGL.data",
-            frameworkUrl: "Build/FragmentAlphaWebGL.framework.js",
+            dataUrl: "Build/FragmentAlpha.data",
+            frameworkUrl: "Build/FragmentAlpha.framework.js",
             codeUrl: "Build/FragmentAlpha.wasm",
             streamingAssetsUrl: "StreamingAssets",
             companyName: "RoundTableGames",
