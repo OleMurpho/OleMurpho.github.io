@@ -14,7 +14,7 @@ function playFragment() {
         {
             dataUrl: "Build/FragmentAlphaWebGL.data",
             frameworkUrl: "Build/FragmentAlphaWebGL.framework.js",
-            codeUrl: "Build/FragmentAlphaWebGL.wasm",
+            codeUrl: "Build/FragmentAlpha.wasm",
             streamingAssetsUrl: "StreamingAssets",
             companyName: "RoundTableGames",
             productName: "Fragment",
