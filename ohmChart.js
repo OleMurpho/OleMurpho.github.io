@@ -185,7 +185,7 @@ function calculate()
                 currentOhms = currentVolts / currentAmps;
             }
             //Ohms & Volts
-            else if (currentOhmss != 0 && currentVolts != 0)
+            else if (currentOhms != 0 && currentVolts != 0)
             {
                 currentAmps = currentVolts / currentOhms;
                 currentWatts = currentVolts * currentAmps;
