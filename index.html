@@ -1,6 +1,6 @@
 <!--
 MURPHY M. LOPES
-09/08/2023
+03/22/2024
 [index.html]
 -->
 <!DOCTYPE html>
@@ -16,16 +16,354 @@ MURPHY M. LOPES
         <header>
             <nav class="navClass">
                 <ul>
-                    <li id="navListIdHome"><a href="index.html">Home</a></li>
-                    <li id="navListIdApps"><a href="app.html">Apps</a></li>
-                    <li id="navListIdGames"><a href="game.html">Games</a></li>
+                    <li id="navListIdHome"><button class="activeAppButton" id="fragmentButton" onclick="setActiveAppButton(this.id)">Fragment</button></li>
+                    <li id="navListIdApps"><button class="potentialAppButton" id="ohmButton" onclick="setActiveAppButton(this.id)">Ohm Chart</button></li>
+                    <li id="navListIdGames"><button class="potentialAppButton" id="hvacButton" onclick="setActiveAppButton(this.id)">HVAC Trainer</button></li>
+                    <li id="navListIdGames"><button class="potentialAppButton" id="comfyButton" onclick="setActiveAppButton(this.id)">TORY</button></li>
                 </ul>
             </nav>
-            <div class="pageTitleClass" id="navListIdHome">
-                <h1>Home</h1>
+            <div class="pageTitleClass" id="navListIdApps">
+                <h1 id="pageTitleHeading">Fragment</h1>
             </div>
         </header>
         <main>
+            <div class="activeAppContainer" id="app_fragment">
+                <div id="fragmentDivBody">
+                    <div id="fragmentControlsDiv">
+                        <h1>Fragment</h1>
+                        <h3 style="text-align:center; margin:5px;">
+                            Fragment is a procedurally generating rolling platformer. Press 'T' to skip a level.
+                        </h3>
+                        <div id="fragmentGameplayDiv">
+                            <div id="fragmentGameplayInnerDiv">
+                                <h2 style="text-align: center; line-height: 150%;">
+                                    <span style="color:orange; font-size: xx-large;">&#8593</span>: W<br>
+                                    <span style="color:orange; font-size: xx-large;">&#8592</span>: A<br>
+                                    <span style="color:orange; font-size: xx-large;">&#8595</span>: S<br>
+                                    <span style="color:orange; font-size: xx-large;">&#8594</span>: D<br>
+                                    <span style="color:orange; font-size: xx-large;">&#8631</span>: T<br>
+                                </h2>
+                            </div>
+                            <div id="fragmentGameplayInnerDiv">
+                                <h2 style="text-align: left; line-height: 150%;">
+                                    <span style="color:aqua; font-size: xx-large;">&#9679</span>: Float<br>
+                                    <span style="color:red; font-size: xx-large;">&#9679</span>: Speed<br>
+                                    <span style="color:lawngreen; font-size: xx-large;">&#9679</span>: Jump<br>
+                                    <span style="color:darkorchid; font-size: xx-large;">&#9679</span>: Warp<br>
+                                </h2>
+                            </div>
+                            <div id="fragmentGameplayInnerDiv">
+                                <h2 style="text-align: left; line-height: 150%;">
+                                    <span style="color:aqua; font-size: xx-large;">&#9632</span>: Flash<br>
+                                    <span style="color:red; font-size: xx-large;">&#9632</span>: Fall<br>
+                                    <span style="color:lawngreen; font-size: xx-large;">&#9632</span>: Rise<br>
+                                    <span style="color:darkorchid; font-size: xx-large;">&#9632</span>: Spin<br>
+                                </h2>
+                            </div>
+                        </div>
+                        <input type="button" id="fragmentPlayButton" onclick="playFragment()">
+                    </div>
+                    <div id="fragmentGameDiv">
+                        <canvas id="unity-canvas" style="width: 70vw; height: 70vh; background: #312c2c"></canvas>
+                        <script src="Build/FragmentAlpha.loader.js"></script>
+                    </div>
+                </div>
+            </div>
+            <div class="potentialAppContainer" id="app_ohmChart">
+                <div class="ohmChart" style="border-radius: 50%;">
+                    <!-- chartSliceOuter0 -->                       <!-- OUTER CHART SLICES -->
+                    <div id="chartSliceOuter0" class="holdOuter">
+                        <p>VOLTS</p>
+                        <div class="chartOuter">
+                        </div>
+                    </div>
+                    <!-- chartSliceOuter1 -->
+                    <div id="chartSliceOuter1" class="holdOuter">
+                        <p>OHMS</p>
+                        <div class="chartOuter">
+                        </div>
+                    </div>
+                    <!-- chartSliceOuter2 -->
+                    <div id="chartSliceOuter2" class="holdOuter">
+                        <p>WATTS</p>
+                        <div class="chartOuter">
+                        </div>
+                    </div>
+                    <!-- chartSliceOuter3 -->
+                    <div id="chartSliceOuter3" class="holdOuter">
+                        <p>AMPS</p>
+                        <div class="chartOuter">
+                        </div>
+                    </div> 
+                    <!-- chartSlice0 -->                            <!-- MIDDLE CHART SLICES -->
+                    <div id="chartSlice0" class="hold">
+                        <p>
+                            √
+                            <span style="text-decoration: overline;">
+                                <span id="voltSpan0P">P</span> ×
+                                <span id="voltSpan0R">R</span>
+                            </span>
+                        </p>
+                        <div class="chart">
+                        </div>
+                    </div>
+                    <!-- chartSlice1 -->
+                    <div id="chartSlice1" class="hold">
+                        <p>
+                            <span id="voltSpan1P">P</span> ÷ 
+                            <span id="voltSpan1I">I</span>
+                        </p>
+                        <div class="chart">
+                        </div>
+                    </div>
+                    <!-- chartSlice2 -->
+                    <div id="chartSlice2" class="hold">
+                        <p>
+                            <span id="voltSpan2I">I</span> × 
+                            <span id="voltSpan2R">R</span>
+                        </p>
+                        <div class="chart">
+                        </div>
+                    </div>
+                    <!-- chartSlice3 -->
+                    <div id="chartSlice3" class="hold">
+                        <p>
+                            <span id="ohmSpan0E">E</span> ÷ 
+                            <span id="ohmSpan0I">I</span>
+                        </p>
+                        <div class="chart">
+                        </div>
+                    </div>
+                    <!-- chartSlice4 -->
+                    <div id="chartSlice4" class="hold">
+                        <p>
+                            <span id="ohmSpan1E">E</span>&#178 ÷ 
+                            <span id="ohmSpan1P">P</span>
+                        </p>
+                        <div class="chart">
+                        </div>
+                    </div>
+                    <!-- chartSlice5 -->
+                    <div id="chartSlice5" class="hold">
+                        <p>
+                            <span id="ohmSpan2P">P</span> ÷ 
+                            <span id="ohmSpan2I">I</span>&#178
+                        </p>
+                        <div class="chart">
+                        </div>
+                    </div>
+                    <!-- chartSlice6 -->
+                    <div id="chartSlice6" class="hold">
+                        <p>
+                            <span id="wattSpan0E">E</span>&#178 ÷ 
+                            <span id="wattSpan0R">R</span>
+                        </p>
+                        <div class="chart">
+                        </div>
+                    </div>
+                    <!-- chartSlice7 -->
+                    <div id="chartSlice7" class="hold">
+                        <p>
+                            <span id="wattSpan1I">I</span>&#178 × 
+                            <span id="wattSpan1R">R</span>
+                        </p>
+                        <div class="chart">
+                        </div>
+                    </div>
+                    <!-- chartSlice8 -->
+                    <div id="chartSlice8" class="hold">
+                        <p>
+                            <span id="wattSpan2E">E</span> × 
+                            <span id="wattSpan2I">I</span>
+                        </p>
+                        <div class="chart">
+                        </div>
+                    </div>
+                    <!-- chartSlice9 -->
+                    <div id="chartSlice9" class="hold">
+                        <p>
+                            <span id="ampSpan0E">E</span> ÷ 
+                            <span id="ampSpan0R">R</span>
+                        </p>
+                        <div class="chart">
+                        </div>
+                    </div>
+                    <!-- chartSlice10 -->
+                    <div id="chartSlice10" class="hold">
+                        <p>
+                            <span id="ampSpan1P">P</span> ÷ 
+                            <span id="ampSpan1E">E</span>
+                        </p>
+                        <div class="chart">
+                        </div>
+                    </div>
+                    <!-- chartSlice11 -->
+                    <div id="chartSlice11" class="hold">
+                        <p>
+                            √
+                            <span style="text-decoration: overline;">
+                                <span id="ampSpan2P">P</span> ÷
+                                <span id="ampSpan2R">R</span>
+                            </span>
+                        </p>
+                        <div class="chart">
+                        </div>
+                    </div>
+                    <!-- chartSliceInner0 -->                       <!-- INNER CHART SLICES -->    
+                    <div id="chartSliceInner0" class="holdInner">
+                        <p id="bigVolt"style="margin-left: 50%; margin-top: 10%;">E</p>
+                        <input type="number" id="voltBox" oninput="validateToEnable()">
+                        <div class="chartInner"></div>
+                    </div>
+                    <!-- chartSliceInner1 -->
+                    <div id="chartSliceInner1" class="holdInner">
+                        <p id="bigOhm" style="margin-left: 45%; margin-top: 6%;">R</p>
+                        <input type="number" id="ohmBox" oninput="validateToEnable()">
+                        <div class="chartInner"></div>
+                    </div>
+                    <!-- chartSliceInner2 -->
+                    <div id="chartSliceInner2" class="holdInner">
+                        <p id="bigWatt" style="margin-left: 50%; margin-top: 10%;">P</p>
+                        <input type="number" id="wattBox" oninput="validateToEnable()">
+                        <div class="chartInner"></div>
+                    </div>
+                    <!-- chartSliceInner3 -->
+                    <div id="chartSliceInner3" class="holdInner">
+                        <p id="bigAmp"style="margin-left: 45%; margin-top: 6%;">I</p>
+                        <input type="number" id="ampBox" oninput="validateToEnable()">
+                        <div class="chartInner"></div>
+                    </div>
+                    <input type="button" id="calcButton" value="ENTER" onclick="calculate()" disabled>
+                </div>
+            </div>
+            <div class="potentialAppContainer" id="app_hvacTrainer">            <!--column flex | layer 1-->
+            <div id="hvacTrainer">                                                  <!--column flex | layer 2-->
+                    <div id="dropdownContainer">                                        <!--row flex | layer 3-->
+                        <div id="dropdownLeftContainer">                                    <!--row flex | layer 4-->
+                            <div id="dropdownSystemContainer">                                  <!--column flex | layer 5-->
+                                <select name="systemSelect" id="systemSelector" class="selectorClass">
+                                    <option value="testSystem01">Test System 01</option>
+                                    <option value="testSystem02">Test System 02</option>
+                                    <option value="testSystem03">Test System 03</option>
+                                    <option value="testSystem04">Test System 04</option>
+                                    <option value="testSystem05">Test System 05</option>
+                                </select>
+                            </div>
+                            <div id="dropdownEquipmentContainer">                               <!--column flex | layer 5-->
+                                <select name="indoorSelect" id="indoorSelector" class="selectorClass">
+                                    <option value="testIndoor01">Test Indoor 01</option>
+                                    <option value="testIndoor02">Test Indoor 02</option>
+                                    <option value="testIndoor03">Test Indoor 03</option>
+                                    <option value="testIndoor04">Test Indoor 04</option>
+                                    <option value="testIndoor05">Test Indoor 05</option>
+                                </select>
+                                <select name="outdoorSelect" id="outdoorSelector" class="selectorClass">
+                                    <option value="testOutdoor01">Test Outdoor 01</option>
+                                    <option value="testOutdoor02">Test Outdoor 02</option>
+                                    <option value="testOutdoor03">Test Outdoor 03</option>
+                                    <option value="testOutdoor04">Test Outdoor 04</option>
+                                    <option value="testOutdoor05">Test Outdoor 05</option>
+                                </select>
+                            </div>
+                            <div id="dropdownControlContainer">                                 <!--column flex | layer 5-->
+                                <select name="zoneSelect" id="zoneSelector" class="selectorClass">
+                                    <option value="testZone01">Test Zone 01</option>
+                                    <option value="testZone02">Test Zone 02</option>
+                                    <option value="testZone03">Test Zone 03</option>
+                                    <option value="testZone04">Test Zone 04</option>
+                                    <option value="testZone05">Test Zone 05</option>
+                                </select>
+                                <select name="thermostatSelect01" id="thermostatSelector01" class="selectorClass">
+                                    <option value="testThermostat01">Test Thermostat 01</option>
+                                    <option value="testThermostat02">Test Thermostat 02</option>
+                                    <option value="testThermostat03">Test Thermostat 03</option>
+                                    <option value="testThermostat04">Test Thermostat 04</option>
+                                    <option value="testThermostat05">Test Thermostat 05</option>
+                                </select>
+                                <button id="addThermostat02Button" class="addButtons" onclick="">+</button>
+                            </div>
+                        </div>
+                        <div id="dropdownRightContainer">                                   <!--row flex | layer 4-->
+                            <div id="dropdownFaultContainer">                                   <!--column flex | layer 5-->
+                                <select name="faultSelect01" id="faultSelector01" class="selectorClass">
+                                    <option value="testFault01">Test Fault 01</option>
+                                    <option value="testFault02">Test Fault 02</option>
+                                    <option value="testFault03">Test Fault 03</option>
+                                    <option value="testFault04">Test Fault 04</option>
+                                    <option value="testFault05">Test Fault 05</option>
+                                </select>
+                                <button id="addFault02Button" class="addButtons" onclick="">+</button>
+                                <button id="addFault03Button" class="addButtons" onclick="">+</button>
+                            </div>
+                            <div id="dropdownReadyContainer">                                   <!--column flex | layer 5-->
+                                <button id="readyButton" onclick="readyUp()">Trainer Ready</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="workingContainer">                                         <!--row flex | layer 3-->
+                        <div id="controlContainer">                                         <!--column flex | layer 4-->
+                            <div id="controlTabContainer">                                      <!--row flex | layer 5-->
+                                <button id="thermostatButton01" class="controlButtonActive" onclick="setActiveButton(this.id)">Thermostat 01</button>
+                                <button id="thermostatButton02" class="tabButtons" onclick="setActiveButton(this.id)">Thermostat 02</button>
+                                <button id="thermostatButton03" class="tabButtons" onclick="setActiveButton(this.id)">Thermostat 03</button>
+                                <button id="zoneButton" class="tabButtons" onclick="setActiveButton(this.id)">Zone Board</button>
+                            </div>
+                            <div class="controlTabActive" id="controlTabPotential0">            <!--row flex | layer 5 hidden-->
+                                <!--thermostat01 face | thermostat01 back-->
+                            </div>
+                            <div class="potentialTab" id="controlTabPotential1">                <!--row flex | layer 5 hidden-->
+                                <!--thermostat02 face | thermostat02 back-->
+                            </div>
+                            <div class="potentialTab" id="controlTabPotential2">                <!--row flex | layer 5 hidden-->
+                                <!--thermostat03 face | thermostat03 back-->
+                            </div>
+                            <div class="potentialTab" id="controlTabPotential3">                <!--row flex | layer 5 hidden-->
+                                <!--zoneBoard face-->
+                            </div>
+                        </div>
+                        <div id="equipmentContainer">                                       <!--column flex | layer 4-->
+                            <div id="equipmentTabContainer">                                    <!--row flex | layer 5-->
+                                <button id="airHandlerButton" class="equipmentButtonActive" onclick="setActiveButton(this.id)">Air-Handler</button>
+                                <button id="condenserButton" class="tabButtons" onclick="setActiveButton(this.id)">Condenser</button>
+                                <button id="documentationButton" class="tabButtons" onclick="setActiveButton(this.id)">Documentation</button>
+                            </div>
+                            <div class="equipmentTabActive" id="equipmentTabPotential0">        <!--row flex | layer 5 hidden-->
+                                <!--air handler/furnace & coil | plenums & dampers | disconnect | diagnostic panel-->
+                            </div>
+                            <div class="potentialTab" id="equipmentTabPotential1">              <!--row flex | layer 5 hidden-->
+                                <!--condenser | disconnect | diagnostic panel-->
+                            </div>
+                            <div class="potentialTab" id="equipmentTabPotential2">              <!--row flex | layer 5 hidden-->
+                                <!--documentation tabs for all equipment-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="potentialAppContainer" id="app_comfyStock"> 
+                <div id="comfyStock">                                               <!--column flex | layer 2--> 
+                    <div id="buttonContainer">                                          <!--row flex | layer 3-->
+                        <div id="logButtonContainer">
+
+                        </div>
+                        <div id="stockButtonContainer">
+
+                        </div>
+                    </div>
+                    <div id="contentContainer">                                         <!--row flex | layer 3-->
+                        <div id="logContainer">                                             <!--column flex | layer 4-->
+
+                        </div>
+                        <div id="stockContainer">                                           <!--column flex | layer 4-->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
         </main>
+        <script src="navigator.js"></script>
+        <script src="fragment.js"></script>
+        <script src="ohmChart.js"></script>
+        <script src="hvacTrainer.js"></script>
     </body>
 </html>
