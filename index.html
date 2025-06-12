@@ -19,7 +19,7 @@ MURPHY M. LOPES
                     <li id="navListIdHome"><button class="activeAppButton" id="fragmentButton" onclick="setActiveAppButton(this.id)">Fragment</button></li>
                     <li id="navListIdApps"><button class="potentialAppButton" id="ohmButton" onclick="setActiveAppButton(this.id)">Ohm Chart</button></li>
                     <li id="navListIdGames"><button class="potentialAppButton" id="hvacButton" onclick="setActiveAppButton(this.id)">HVAC Trainer</button></li>
-                    <li id="navListIdGames"><button class="potentialAppButton" id="comfyButton" onclick="setActiveAppButton(this.id)">TORY</button></li>
+                    <li id="navListIdGames"><button class="potentialAppButton" id="toryButton" onclick="setActiveAppButton(this.id)">TORY</button></li>
                 </ul>
             </nav>
             <div class="pageTitleClass" id="navListIdApps">
@@ -340,11 +340,17 @@ MURPHY M. LOPES
                     </div>
                 </div>
             </div>
-            <div class="potentialAppContainer" id="app_comfyStock"> 
-                <div id="comfyStock">                                               <!--column flex | layer 2--> 
+            <div class="potentialAppContainer" id="app_TORY"> 
+                <div id="TORY">                                               <!--column flex | layer 2--> 
                     <div id="buttonContainer">                                          <!--row flex | layer 3-->
                         <div id="logButtonContainer">
+                            <label for="toryUser"><b>Username</b></label>
+                            <input type="text" placeholder="Enter Username" name="toryUser" required>
 
+                            <label for="toryPass"><b>Password</b></label>
+                            <input type="password" placeholder="Enter Password" name="toryPass" required>
+                                
+                            <button type="button">Login</button>
                         </div>
                         <div id="stockButtonContainer">
 

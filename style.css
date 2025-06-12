@@ -651,10 +651,10 @@ main {
   width: 100%;
 }
 
-/* COMFYSTOCK */
-#comfyStock {
+/* TORY */
+#TORY {
   align-items: center;
-  background-image: linear-gradient(#DAE8FC, #00CCCC);
+  background-image: linear-gradient(#000000, #08ee27);
   border-radius: 5px;
   display: flex;
   flex-direction: column;
@@ -668,19 +668,19 @@ main {
 }
 #buttonContainer {
   align-items: center;
-  background-image: linear-gradient(white, aqua);
+  background-color: black;
   display: flex;
   flex-direction: row;
-  height: 10vh;
+  height: 11vh;
   justify-content: space-evenly;
   width: 95%;
 }
 #contentContainer {
   align-items: center;
-  background-image: linear-gradient(white, green);
+  background-color: black;
   display: flex;
   flex-direction: row;
-  height: 70vh;
+  height: 69vh;
   justify-content: space-evenly;
   width: 95%;
 }

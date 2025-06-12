@@ -12,13 +12,13 @@ var $ = function(id) { return document.getElementById(id); };
 var fragmentButton = $("fragmentButton");
 var ohmButton = $("ohmButton");
 var hvacButton = $("hvacButton");
-var comfyButton = $("comfyButton");
+var toryButton = $("toryButton");
 
 //app containers
 var appFragment = $("app_fragment");
 var appOhmChart = $("app_ohmChart");
 var appHvacTrainer = $("app_hvacTrainer");
-var appComfyStock = $("app_comfyStock");
+var appTORY = $("app_TORY");
 
 //page title
 var pageTitleHeading = $("pageTitleHeading");
@@ -56,8 +56,8 @@ function setActiveApp(activeID)
             case hvacButton.id:
                 appHvacTrainer.className = "activeAppContainer";
                 break;
-            case comfyButton.id:
-                appComfyStock.className = "activeAppContainer";
+            case toryButton.id:
+                appTORY.className = "activeAppContainer";
                 break;
         }
     }

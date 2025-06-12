@@ -1,6 +1,5 @@
-const comfyHex = "af66b54a075fa8a90d5d37dba5af0830dd923f628f3c79a99034ec7bb0ef5f71";
-const comfyHex2 = "d9920dc69e7b8352ea5774041afeaf8eeebd1c4985bae1368c2a5559c12bcb56";
-var testInput = "testMessage";
+const hex = "af66b54a075fa8a90d5d37dba5af0830dd923f628f3c79a99034ec7bb0ef5f71";
+var testInput = "testMessage";      
 async function digestMessage(message) {
     const msgUint8 = new TextEncoder().encode(message); // encode as (utf-8) Uint8Array
     const hashBuffer = await crypto.subtle.digest("SHA-256", msgUint8); // hash the message
@@ -15,7 +14,7 @@ function getPassword(userInput) {
 	digestMessage(userInput).then((digestHex) => checkHex(digestHex));
 }
 function checkHex(digestHex) {
-    if (digestHex == comfyHex2) {
+    if (digestHex == hex) {
         loadStock();
     }
 }
