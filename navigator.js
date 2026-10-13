@@ -2,6 +2,7 @@
  * MURPHY M. LOPES
  * 03/23/2024
  * navigator.js
+ * 2026-10-13: tabs reduced to Games (Fragment) and Tools (Ohm Chart).
  */
 "use strict";
 
@@ -9,16 +10,12 @@
 var $ = function(id) { return document.getElementById(id); };
 
 //app buttons
-var fragmentButton = $("fragmentButton");
-var ohmButton = $("ohmButton");
-var hvacButton = $("hvacButton");
-var toryButton = $("toryButton");
+var gamesButton = $("gamesButton");
+var toolsButton = $("toolsButton");
 
 //app containers
-var appFragment = $("app_fragment");
-var appOhmChart = $("app_ohmChart");
-var appHvacTrainer = $("app_hvacTrainer");
-var appTORY = $("app_TORY");
+var appGames = $("app_games");
+var appTools = $("app_tools");
 
 //page title
 var pageTitleHeading = $("pageTitleHeading");
@@ -47,17 +44,11 @@ function setActiveApp(activeID)
     {
         activeAppContainer[0].className = "potentialAppContainer";
         switch(activeID) {
-            case fragmentButton.id:
-                appFragment.className = "activeAppContainer";
+            case gamesButton.id:
+                appGames.className = "activeAppContainer";
                 break;
-            case ohmButton.id:
-                appOhmChart.className = "activeAppContainer";
-                break;
-            case hvacButton.id:
-                appHvacTrainer.className = "activeAppContainer";
-                break;
-            case toryButton.id:
-                appTORY.className = "activeAppContainer";
+            case toolsButton.id:
+                appTools.className = "activeAppContainer";
                 break;
         }
     }
